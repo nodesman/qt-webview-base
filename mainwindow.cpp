@@ -7,9 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->webView = new QtWebView(this);
-    this->setCentralWidget(this->webView);
-    webView->load(QUrl("http://www.google.com"));
+    this->webView = new QWebEngineView(this);
+    this->webView->load(QUrl("http://www.google.com"));
+    this->setCentralWidget(webView);
+
 }
 
 MainWindow::~MainWindow()

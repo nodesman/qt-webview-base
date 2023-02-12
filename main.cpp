@@ -1,10 +1,9 @@
 #include "mainwindow.h"
-#include <QtWebView/QtWebView>
 #include <QApplication>
-
+#include <QtWebEngineWidgets/QWebEngineView>
+#include <QtWebView/QtWebView>
 int main(int argc, char *argv[])
 {
-    QtWebView::initialize();
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
